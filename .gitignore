@@ -1,28 +1,40 @@
-# Angular specific
-/dist/
-/out-tsc/
-/tmp/
-/coverage/
-/e2e/test-output/
-/.angular/
-.angular/
+# === Node / React ===
+node_modules/
+dist/
+.vite/
+*.local
 
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
 
-# Environment files
-/.env
+# === Environment Variables (NEVER commit secrets) ===
+.env
+.env.local
+.env.production
+.env.development
 
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
+# === Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
 
-# TypeScript cache
-*.tsbuildinfo
+# === Vercel ===
+.vercel/
 
-# Logs
+# === Logs ===
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
