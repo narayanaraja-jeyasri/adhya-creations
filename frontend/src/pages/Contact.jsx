@@ -121,7 +121,7 @@ export default function Contact() {
                 <p className="text-sm text-muted mb-4">Follow us</p>
                 <div className="flex gap-4">
                   <a href="https://www.facebook.com/profile.php?id=61594360046171" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaFacebook /></a>
-                  <a href="https://www.instagram.com/jeyasrisudarraj/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaInstagram /></a>
+                  <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaInstagram /></a>
                   <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaYoutube /></a>
                 </div>
               </div>

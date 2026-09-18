@@ -35,7 +35,7 @@ export default function Navbar() {
             <span className="text-2xl font-bold font-montserrat text-gold">ADHYA</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-[14px] font-bold font-montserrat tracking-wide text-white">Digi Creations</span>
+            <span className="text-[14px] font-bold font-montserrat tracking-wide text-white">Creations &</span>
             <span className="text-[10px] text-muted tracking-widest uppercase">Tech Solutions</span>
           </div>
         </Link>

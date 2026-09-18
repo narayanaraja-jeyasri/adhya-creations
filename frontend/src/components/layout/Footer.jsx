@@ -18,7 +18,7 @@ export default function Footer() {
               <a href="https://www.facebook.com/profile.php?id=61594360046171" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
                 <FaFacebook size={18} />
               </a>
-              <a href="https://www.instagram.com/jeyasrisudarraj/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
+              <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
                 <FaInstagram size={18} />
               </a>
               <a href="https://wa.me/+919242267605" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
