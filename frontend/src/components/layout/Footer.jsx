@@ -21,7 +21,7 @@ export default function Footer() {
               <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
                 <FaInstagram size={18} />
               </a>
-              <a href="https://wa.me/+919242267605" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
+              <a href="https://wa.me/+919342267605" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
                 <FaWhatsapp size={18} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
@@ -57,7 +57,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold font-montserrat mb-6">Contact Us</h4>
             <ul className="flex flex-col gap-3 text-sm text-muted">
               <li>Email: adhyadigitech@gmail.com</li>
-              <li>Phone: +91 92422 67605</li>
+              <li>Phone: +91 93422 67605</li>
               <li className="mt-2">
                 <strong>Locations:</strong><br />
                 Pavoorchatram | Alangulam | Tenkasi | Tirunelveli

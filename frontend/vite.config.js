@@ -5,6 +5,11 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    watch: {
+      ignored: ['**/*.mp4', '**/assets/*.mp4'],
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
