@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FaStar } from 'react-icons/fa6'
 
 const testimonials = [
   {
@@ -37,8 +38,17 @@ export default function Testimonials() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold font-montserrat mb-4 text-white">What Our Clients Say</h2>
-          <div className="flex justify-center gap-1 text-gold text-xl">
-            ★★★★★
+          <div className="flex justify-center gap-1.5 text-gold text-base mt-2">
+            {[...Array(5)].map((_, i) => (
+              <motion.div
+                key={i}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: i * 0.1, type: "spring" }}
+              >
+                <FaStar />
+              </motion.div>
+            ))}
           </div>
         </div>
 

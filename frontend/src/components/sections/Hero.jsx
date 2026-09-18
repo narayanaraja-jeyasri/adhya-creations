@@ -26,7 +26,7 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="gap-12 items-center" style={{ display: "flex", alignItems: "center" }}>
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -60,8 +60,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Link to="/contact" className="bg-gradient-gold text-dark px-8 py-4 rounded-full font-bold text-lg hover:glow-gold transition-all duration-300 hover:scale-105 flex items-center gap-2">
-                Let's Grow Together <span>→</span>
+              <Link to="/contact" className="bg-gradient-gold text-dark px-8 py-4 rounded-full font-bold text-lg hover:glow-gold transition-all duration-300 hover:scale-105 flex items-center gap-2 group">
+                <span>Let's Grow Together</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </Link>
               <Link to="/portfolio" className="border-2 border-gold text-gold px-8 py-4 rounded-full font-bold text-lg hover:bg-gold/10 transition-all duration-300">
                 View Our Work
@@ -74,7 +75,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:block" style={{ width: "460px" }}
           >
             <div className="rounded-2xl border border-white/10 h-[460px] lg:h-[520px] w-full relative overflow-hidden flex items-center justify-center group bg-black shadow-2xl">
               <video
@@ -87,21 +88,6 @@ export default function Hero() {
                 <source src="/assets/ADHYA_logo_animation.mp4" type="video/mp4" />
               </video>
             </div>
-
-            {/* Floating stats card */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-10 -left-10 glass p-4 rounded-xl flex items-center gap-4"
-            >
-              <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center text-gold font-bold text-xl">
-                3x
-              </div>
-              <div>
-                <p className="text-xs text-muted font-semibold uppercase">Average</p>
-                <p className="font-bold text-white">ROI Increase</p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 
@@ -14,19 +15,26 @@ export default function Footer() {
             <p className="text-muted text-sm mb-6">
               Creative Solutions for Modern Businesses. Make your business impossible to ignore with our premium digital services.
             </p>
-            <div className="flex gap-4">
-              <a href="https://www.facebook.com/profile.php?id=61594360046171" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
-                <FaFacebook size={18} />
-              </a>
-              <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
-                <FaInstagram size={18} />
-              </a>
-              <a href="https://wa.me/+919342267605" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
-                <FaWhatsapp size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
-                <FaYoutube size={18} />
-              </a>
+            <div className="flex gap-3">
+              {[
+                { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/profile.php?id=61594360046171" },
+                { icon: <FaInstagram size={18} />, href: "#" },
+                { icon: <FaWhatsapp size={18} />, href: "https://wa.me/+919342267605" },
+                { icon: <FaYoutube size={18} />, href: "#" }
+              ].map((item, idx) => (
+                <motion.a
+                  key={idx}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ scale: 1.25, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                  className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-gold/10 hover:border hover:border-gold/30 hover:shadow-md hover:shadow-gold/20 transition-all"
+                >
+                  {item.icon}
+                </motion.a>
+              ))}
             </div>
           </div>
 

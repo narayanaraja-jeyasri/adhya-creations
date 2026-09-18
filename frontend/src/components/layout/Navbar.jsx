@@ -31,9 +31,9 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 z-50 group">
-          <div className="relative h-10 flex items-center justify-center bg-dark-secondary rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/50 transition-colors">
+          <div className="relative h-10 flex items-center justify-center bg-dark-secondary rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/50 group-hover:shadow-md group-hover:shadow-gold/20 transition-all">
             <span className="text-2xl font-bold font-montserrat text-gold">
-              <img src="/assets/favicon.png" alt="Adhya Creations & Tech Solutions" className="h-10 w-10" />
+              <img src="/assets/favicon.png" alt="Adhya Creations & Tech Solutions" className="h-10 w-10 group-hover:scale-110 transition-transform duration-300" />
             </span>
           </div>
           <div className="flex flex-col">

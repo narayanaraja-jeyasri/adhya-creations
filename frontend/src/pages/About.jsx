@@ -55,10 +55,17 @@ export default function About() {
             <p className="text-gray-300 leading-relaxed mb-8">
               We started with a passion for design and technology, aiming to bridge the gap between traditional businesses and the digital world. Today, we are a full-service agency helping brands across various industries establish a commanding online presence.
             </p>
-            <div className="flex gap-4 mb-8">
-              <span className="px-4 py-2 bg-dark-secondary rounded-full text-sm text-gold font-medium">📍 Tenkasi</span>
-              <span className="px-4 py-2 bg-dark-secondary rounded-full text-sm text-gold font-medium">📍 Tirunelveli</span>
-              <span className="px-4 py-2 bg-dark-secondary rounded-full text-sm text-gold font-medium">📍 Alangulam</span>
+            <div className="flex flex-wrap gap-3 mb-8">
+              {["Pavoorchatram", "Tenkasi", "Tirunelveli", "Alangulam"].map((loc, idx) => (
+                <motion.span 
+                  key={idx}
+                  whileHover={{ scale: 1.08, y: -2 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                  className="px-4 py-2 bg-dark-secondary rounded-full text-sm text-gold font-medium border border-gold/20 hover:border-gold shadow-sm flex items-center gap-1.5 cursor-default"
+                >
+                  <span className="text-xs animate-pulse">📍</span> {loc}
+                </motion.span>
+              ))}
             </div>
           </motion.div>
 
@@ -99,12 +106,18 @@ export default function About() {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-dark-card p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-colors"
+                whileHover={{ y: -8, scale: 1.03 }}
+                className="bg-dark-card p-8 rounded-3xl border border-white/5 hover:border-gold/40 transition-all duration-300 group hover:shadow-xl hover:shadow-gold/10 relative overflow-hidden"
               >
-                <div className="w-14 h-14 rounded-full bg-gold/10 text-gold flex items-center justify-center mb-6">
+                <motion.div 
+                  whileHover={{ rotate: [0, -10, 10, 0], scale: 1.15 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 text-gold flex items-center justify-center mb-6 group-hover:border-gold group-hover:shadow-lg group-hover:shadow-gold/20 transition-all duration-300 relative"
+                >
+                  <span className="absolute inset-0 rounded-2xl bg-gold/10 animate-ping opacity-20 pointer-events-none" />
                   {value.icon}
-                </div>
-                <h3 className="text-xl font-bold font-montserrat text-white mb-3">{value.title}</h3>
+                </motion.div>
+                <h3 className="text-xl font-bold font-montserrat text-white mb-3 group-hover:text-gold transition-colors">{value.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}

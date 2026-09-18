@@ -77,52 +77,98 @@ export default function Contact() {
               <p className="text-muted mb-12">Whether you need a new website, a marketing campaign, or a complete brand overhaul, we're here to help.</p>
 
               <div className="space-y-8 mb-12">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                <motion.div 
+                  whileHover={{ x: 6 }}
+                  className="flex items-start gap-4 group cursor-default"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                    className="w-12 h-12 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold shrink-0 relative group-hover:border-gold group-hover:bg-gold group-hover:text-dark transition-all duration-300"
+                  >
+                    <span className="absolute inset-0 rounded-full bg-gold/10 animate-ping opacity-20 pointer-events-none" />
                     <FaEnvelope size={20} />
-                  </div>
+                  </motion.div>
                   <div>
                     <p className="text-sm text-muted mb-1">Email Us</p>
-                    <p className="text-white font-medium">adhyadigitech@gmail.com</p>
+                    <a href="mailto:adhyadigitech@gmail.com" className="text-white font-medium hover:text-gold transition-colors">
+                      adhyadigitech@gmail.com
+                    </a>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                <motion.div 
+                  whileHover={{ x: 6 }}
+                  className="flex items-start gap-4 group cursor-default"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.2, rotate: -10 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                    className="w-12 h-12 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold shrink-0 relative group-hover:border-gold group-hover:bg-gold group-hover:text-dark transition-all duration-300"
+                  >
+                    <span className="absolute inset-0 rounded-full bg-gold/10 animate-ping opacity-20 pointer-events-none" />
                     <FaPhoneAlt size={20} />
-                  </div>
+                  </motion.div>
                   <div>
                     <p className="text-sm text-muted mb-1">Call Us</p>
-                    <p className="text-white font-medium">+91 93422 67605</p>
+                    <a href="tel:+919342267605" className="text-white font-medium hover:text-gold transition-colors">
+                      +91 93422 67605
+                    </a>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                <motion.div 
+                  whileHover={{ x: 6 }}
+                  className="flex items-start gap-4 group cursor-default"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                    className="w-12 h-12 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold shrink-0 relative group-hover:border-gold group-hover:bg-gold group-hover:text-dark transition-all duration-300"
+                  >
+                    <span className="absolute inset-0 rounded-full bg-gold/10 animate-ping opacity-20 pointer-events-none" />
                     <FaMapMarkerAlt size={20} />
-                  </div>
+                  </motion.div>
                   <div>
                     <p className="text-sm text-muted mb-1">Our Locations</p>
                     <p className="text-white font-medium">Alangulam | Pavoorchatram | Tenkasi | Tirunelveli</p>
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <a
-                href="https://wa.me/+919876543210"
+              <motion.a
+                href="https://wa.me/+919342267605"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#25D366]/10 text-[#25D366] font-bold border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-colors mb-8"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center gap-2.5 w-full py-4 rounded-xl bg-[#25D366]/10 text-[#25D366] font-bold border border-[#25D366]/30 hover:bg-[#25D366] hover:text-dark transition-all duration-300 mb-8 shadow-sm group"
               >
-                <FaWhatsapp size={24} /> Chat on WhatsApp
-              </a>
+                <FaWhatsapp size={24} className="group-hover:rotate-12 transition-transform duration-300" />
+                <span>Chat on WhatsApp</span>
+              </motion.a>
 
               <div>
                 <p className="text-sm text-muted mb-4">Follow us</p>
                 <div className="flex gap-4">
-                  <a href="https://www.facebook.com/profile.php?id=61594360046171" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaFacebook /></a>
-                  <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaInstagram /></a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaYoutube /></a>
+                  {[
+                    { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/profile.php?id=61594360046171" },
+                    { icon: <FaInstagram size={18} />, href: "#" },
+                    { icon: <FaYoutube size={18} />, href: "#" }
+                  ].map((soc, sIdx) => (
+                    <motion.a
+                      key={sIdx}
+                      href={soc.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      whileHover={{ scale: 1.25, y: -3 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-dark hover:border-gold transition-all"
+                    >
+                      {soc.icon}
+                    </motion.a>
+                  ))}
                 </div>
               </div>
             </div>
