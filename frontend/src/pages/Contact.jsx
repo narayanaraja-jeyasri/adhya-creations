@@ -35,16 +35,16 @@ export default function Contact() {
       // 2. Backup: Save to Supabase directly
       const { error } = await supabase
         .from('contacts')
-        .insert([{ 
-          name: formData.name, 
-          email: formData.email, 
-          phone: formData.phone, 
-          service: formData.service, 
-          message: formData.message 
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message
         }])
 
       if (error && error.message !== "FetchError: Failed to fetch") {
-         console.log("Supabase error (ignored if placeholder): ", error)
+        console.log("Supabase error (ignored if placeholder): ", error)
       }
 
       toast.success('Message sent successfully! We will contact you soon.')
@@ -65,13 +65,13 @@ export default function Contact() {
       className="bg-dark min-h-screen pt-12 pb-24"
     >
       <div className="container mx-auto px-6 max-w-6xl mt-10">
-        
+
         <div className="grid lg:grid-cols-2 gap-16 bg-dark-card rounded-3xl overflow-hidden border border-white/5">
-          
+
           {/* Left Panel - Info */}
           <div className="p-10 lg:p-16 bg-dark-secondary relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-gold opacity-5 blur-[100px]"></div>
-            
+
             <div className="relative z-10">
               <h2 className="text-4xl font-bold font-montserrat mb-4 text-white">Let's Build Something Great Together</h2>
               <p className="text-muted mb-12">Whether you need a new website, a marketing campaign, or a complete brand overhaul, we're here to help.</p>
@@ -83,17 +83,17 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted mb-1">Email Us</p>
-                    <p className="text-white font-medium">contact@adhyacreations.com</p>
+                    <p className="text-white font-medium">adhyadigitech@gmail.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold shrink-0">
                     <FaPhoneAlt size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-muted mb-1">Call Us</p>
-                    <p className="text-white font-medium">+91 98765 43210</p>
+                    <p className="text-white font-medium">+91 92422 67605</p>
                   </div>
                 </div>
 
@@ -103,14 +103,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted mb-1">Our Locations</p>
-                    <p className="text-white font-medium">Tenkasi | Tirunelveli | Alangulam</p>
+                    <p className="text-white font-medium">Alangulam | Pavoorchatram | Tenkasi | Tirunelveli</p>
                   </div>
                 </div>
               </div>
 
-              <a 
-                href="https://wa.me/+919876543210" 
-                target="_blank" 
+              <a
+                href="https://wa.me/+919876543210"
+                target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#25D366]/10 text-[#25D366] font-bold border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-colors mb-8"
               >
@@ -120,8 +120,8 @@ export default function Contact() {
               <div>
                 <p className="text-sm text-muted mb-4">Follow us</p>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaFacebook /></a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaInstagram /></a>
+                  <a href="https://www.facebook.com/profile.php?id=61594360046171" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaFacebook /></a>
+                  <a href="https://www.instagram.com/jeyasrisudarraj/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaInstagram /></a>
                   <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-gold hover:text-dark transition-all"><FaYoutube /></a>
                 </div>
               </div>
@@ -131,12 +131,12 @@ export default function Contact() {
           {/* Right Panel - Form */}
           <div className="p-10 lg:p-16">
             <h3 className="text-2xl font-bold font-montserrat mb-8 text-white">Send us a message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -145,12 +145,12 @@ export default function Contact() {
                   placeholder="John Doe"
                 />
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -161,8 +161,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">Phone Number</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -175,7 +175,7 @@ export default function Contact() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Service Interested In</label>
-                <select 
+                <select
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
@@ -193,7 +193,7 @@ export default function Contact() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                <textarea 
+                <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -204,7 +204,7 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 disabled={loading}
                 className="w-full bg-gradient-gold text-dark font-bold text-lg py-4 rounded-xl hover:glow-gold transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"

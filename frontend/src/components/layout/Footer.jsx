@@ -9,20 +9,19 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl font-bold font-montserrat text-gold">A</span>
-              <span className="text-2xl font-bold font-montserrat tracking-wide text-white">DHYA</span>
+              <span className="text-3xl font-bold font-montserrat text-gold">ADHYA</span>
             </div>
             <p className="text-muted text-sm mb-6">
               Creative Solutions for Modern Businesses. Make your business impossible to ignore with our premium digital services.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
+              <a href="https://www.facebook.com/profile.php?id=61594360046171" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
                 <FaFacebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
+              <a href="https://www.instagram.com/jeyasrisudarraj/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
                 <FaInstagram size={18} />
               </a>
-              <a href="https://wa.me/+919876543210" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
+              <a href="https://wa.me/+919242267605" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
                 <FaWhatsapp size={18} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-dark-secondary flex items-center justify-center text-white hover:text-gold hover:bg-white/5 transition-all">
@@ -57,18 +56,18 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold font-montserrat mb-6">Contact Us</h4>
             <ul className="flex flex-col gap-3 text-sm text-muted">
-              <li>Email: contact@adhyacreations.com</li>
-              <li>Phone: +91 98765 43210</li>
+              <li>Email: adhyadigitech@gmail.com</li>
+              <li>Phone: +91 92422 67605</li>
               <li className="mt-2">
                 <strong>Locations:</strong><br />
-                Tenkasi | Tirunelveli | Alangulam
+                Pavoorchatram | Alangulam | Tenkasi | Tirunelveli
               </li>
             </ul>
           </div>
         </div>
 
         <div className="h-px w-full bg-gradient-to-r from-transparent via-gold/20 to-transparent mb-8"></div>
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-muted">
           <p>&copy; {new Date().getFullYear()} ADHYA Creations & Tech Solutions. All rights reserved.</p>
           <p className="mt-2 md:mt-0">Made with ❤️ in India</p>

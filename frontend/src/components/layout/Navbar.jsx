@@ -26,18 +26,17 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass py-3' : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-transparent py-5'
+        }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 z-50 group">
-          <div className="relative w-10 h-10 flex items-center justify-center bg-dark-secondary rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/50 transition-colors">
-            <span className="text-2xl font-bold font-montserrat text-gold">A</span>
+          <div className="relative h-10 flex items-center justify-center bg-dark-secondary rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/50 transition-colors">
+            <span className="text-2xl font-bold font-montserrat text-gold">ADHYA</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold font-montserrat tracking-wide text-white">DHYA</span>
-            <span className="text-[10px] text-muted tracking-widest uppercase">Creations & Tech</span>
+            <span className="text-[14px] font-bold font-montserrat tracking-wide text-white">Digi Creations</span>
+            <span className="text-[10px] text-muted tracking-widest uppercase">Tech Solutions</span>
           </div>
         </Link>
 
@@ -49,9 +48,8 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-gold relative py-2 ${
-                  isActive ? 'text-gold' : 'text-gray-300'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-gold relative py-2 ${isActive ? 'text-gold' : 'text-gray-300'
+                  }`}
               >
                 {link.name}
                 {isActive && (
@@ -98,9 +96,8 @@ export default function Navbar() {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-2xl font-montserrat font-semibold ${
-                    location.pathname === link.path ? 'text-gold' : 'text-white'
-                  }`}
+                  className={`text-2xl font-montserrat font-semibold ${location.pathname === link.path ? 'text-gold' : 'text-white'
+                    }`}
                 >
                   {link.name}
                 </Link>
