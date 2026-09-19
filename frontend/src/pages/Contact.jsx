@@ -27,7 +27,7 @@ export default function Contact() {
       // 1. Try sending via API (if backend exists)
       const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
       try {
-        await axios.post(`${apiUrl}/api/contact`, formData)
+        await axios.post(`${apiUrl}api/contact`, formData)
       } catch (err) {
         console.log("API POST failed, falling back to Supabase", err)
       }
