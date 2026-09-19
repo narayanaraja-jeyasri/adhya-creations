@@ -25,9 +25,15 @@ export default function Contact() {
 
     try {
       // 1. Try sending via API (if backend exists)
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder'
       try {
-        await axios.post(`${apiUrl}api/contact`, formData)
+        await axios.post(`${apiUrl}api/contact`, formData, {
+          headers: {
+            "apikey": supabaseAnonKey,
+            "Authorization": `Bearer ${supabaseAnonKey}`
+          }
+        })
       } catch (err) {
         console.log("API POST failed, falling back to Supabase", err)
       }
